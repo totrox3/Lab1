@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <title>Public Service Commission - Register</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { background: #0f172a; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .card { background: #fff; width: 840px; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); position: relative; }
+        .lang { position: absolute; top: 25px; right: 30px; font-size: 14px; font-weight: bold; cursor: pointer; }
+        .header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .header img { width: 50px; }
+        .header h2 { font-size: 20px; }
+        .title { font-size: 22px; margin-bottom: 20px; }
+        .form-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+        .field { width: calc(33.33% - 10px); display: flex; flex-direction: column; gap: 5px; }
+        .w-2 { width: calc(66.66% - 5px); } 
+        label { font-size: 13px; font-weight: 600; color: #444; }
+        .req { color: #ef4444; margin-left: 2px; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; outline: none; }
+        input:focus, select:focus { border-color: #1d4ed8; }
+        .disabled { background: #f1f5f9; cursor: not-allowed; }
+        .date-box { position: relative; }
+        .date-box span { position: absolute; right: 10px; bottom: 10px; color: #64748b; pointer-events: none; }
+        .radio-box { display: flex; gap: 15px; align-items: center; height: 100%; padding-top: 5px; }
+        .radio-box label { font-weight: normal; display: flex; align-items: center; gap: 5px; cursor: pointer; }
+        .actions { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 25px; }
+        .btn-back { text-decoration: none; color: #1d4ed8; border: 1px solid #1d4ed8; padding: 10px 20px; border-radius: 4px; font-size: 14px; }
+        .btn-submit { background: #1d4ed8; color: #fff; border: none; padding: 10px 24px; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span class="lang">नेपा ▾</span>
+        <div class="header">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZZ8qie6iMM6jOW-Nj9hvuipUw7R1ErbEMjw&s" alt="PSC Logo">
+        <h2>लोक सेवा आयोग</h2>
+        </div>
+        <h3 class="title">दर्ता गर्नुहोस</h3>
+        <form class="form-grid">
+            <div class="field"><label>पहिलो नाम <span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>बीचको नाम</label><input type="text"></div>
+            <div class="field"><label>थर <span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>प्रयोगकर्ता नाम <span class="req">*</span></label><input type="text" required></div>
+            <div class="field date-box"><label>जन्म मिति (वि.सं.) <span class="req">*</span></label><input type="text" placeholder="YYYY-MM-DD" required></div>
+            <div class="field date-box"><label>जन्म मिति (ई.सं.) <span class="req">*</span></label><input type="text" placeholder="YYYY-MM-DD" class="disabled" disabled></div>
+            <div class="field">
+                <label>लिङ्ग <span class="req">*</span></label>
+                <div class="radio-box">
+                    <label><input type="radio" name="g" checked> पुरुष</label>
+                    <label><input type="radio" name="g"> महिला</label>
+                    <label><input type="radio" name="g"> अन्य</label>
+                </div>
+            </div>
+            <div class="field w-2"><label>ईमेल <span class="req">*</span></label><input type="email" required></div>
+            <div class="field"><label>मोबाइल नम्बर <span class="req">*</span></label><input type="tel" required></div>
+            <div class="field"><label>राष्ट्रीय परिचय नम्बर</label><input type="text"></div>
+            <div class="field"><label>नागरिकता नम्बर <span class="req">*</span></label><input type="text" required></div>
+            <div class="field">
+                <label>नागरिकता जारी जिल्ला <span class="req">*</span></label>
+                <select required>
+                    <option value="" disabled selected>विकल्प छान्नुहोस ...</option>
+                    <option>काठमाडौं</option>
+                    <option>ललितपुर</option>
+                    <option>भक्तपुर</option>
+                </select>
+            </div>
+            <div class="field date-box"><label>नागरिकता जारी मिति (वि.सं.) <span class="req">*</span></label><input type="text" placeholder="YYYY-MM-DD" required></div>
+            <div class="field date-box"><label>नागरिकता जारी मिति (ई.सं.) <span class="req">*</span></label><input type="text" placeholder="YYYY-MM-DD" class="disabled" disabled></div>
+            <div class="actions">
+                <a href="#" class="btn-back">लग-इनमा फर्कनुहोस्</a>
+                <button type="submit" class="btn-submit">बुझाउनुहोस</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

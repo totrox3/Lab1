@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-weight: bold;
+        }
+        header { background-color: #ff6b6b; padding: 20px; }
+        footer { background-color: #4dadf7; padding: 20px; }
+        .content { background-color: #f1f3f5; padding: 40px; }
+        .left-sidebar { background-color: #ffd43b; padding: 20px; }
+        .right-sidebar { background-color: #a9e34b; padding: 20px; }
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .content { order: 1; }
+        .left-sidebar { order: 2; }
+        .right-sidebar { order: 3; }
+        @media (min-width: 481px) and (max-width: 768px) {
+            .main-wrapper {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .content {
+                width: 100%;
+                order: 1; 
+            }
+            .left-sidebar {
+                width: 50%;
+                order: 2; 
+            }
+            .right-sidebar {
+                width: 50%;
+                order: 3;
+            }
+        }
+        @media (min-width: 769px) {
+            .main-wrapper {
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+            .left-sidebar {
+                width: 25%;
+                order: 1;
+            }
+            .content {
+                width: 50%;
+                order: 2; 
+            }
+            .right-sidebar {
+                width: 25%;
+                order: 3; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <div class="main-wrapper">
+        <aside class="left-sidebar">Left</aside>
+        <main class="content">Main</main>
+        <aside class="right-sidebar">Right</aside>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>
